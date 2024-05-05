@@ -30,3 +30,21 @@ Constraints:
 0 <= args.length <= 10
 */
 
+const createHelloWorld = function() {
+    return function(...args){
+        return "Hello World";
+    }
+}
+
+const a = createHelloWorld()
+
+add(1,2)
+
+function add(a,b){
+    console.log(a + b);
+}
+
+const add = (a,b) => {
+    return a + b;
+}
+
