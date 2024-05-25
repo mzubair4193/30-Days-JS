@@ -121,3 +121,23 @@ let isCountryIncludesLand = countries.every(country => {
     return country.toLowerCase().includes("land")
 })
 console.log(isCountryIncludesLand);
+
+let firstCountry6Chars = countries.find(country => {
+    return country.length === 6
+});
+console.log(firstCountry6Chars);
+
+let firstIndexPosCountry6Chars = countries.findIndex(country => {
+    return country.length === 6
+});
+console.log(firstIndexPosCountry6Chars);
+
+let firstIndexPosNorwayExist = countries.findIndex(country => {
+    return country.includes("Norway")
+});
+console.log(firstIndexPosNorwayExist);
+
+let firstIndexPosRussiaExist = countries.findIndex(country => {
+    return country.includes("Russia")
+});
+console.log(firstIndexPosRussiaExist);
