@@ -37,3 +37,4 @@ console.log(intersection)
 
 let union = [...a, ...b]
 console.log(union);
+
