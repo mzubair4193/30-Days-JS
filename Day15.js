@@ -141,3 +141,41 @@ class Statistics {
 
 let numbers = new Statistics([31, 26, 34, 37, 27, 26, 32, 32, 26, 27, 27, 24, 32, 33, 27, 25, 26, 38, 37, 31, 34, 24, 33, 29, 26]);
 console.log(numbers.describe())
+
+class PersonAccount {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.incomes = [];
+        this.expenses = [];
+    }
+
+    totalIncome() {
+        let totalIncom = 0;
+        this.incomes.forEach(income => totalIncom += income)
+        return totalIncom
+    }
+    totalExpenses() {
+        let totalExpenses = 0;
+        this.expenses.forEach(expense => totalExpenses += expense)
+        return totalExpenses;
+    }
+
+    accountInfo() {
+        return `
+        Full-Name: ${this.firstName} ${this.lastName}
+        total-Income: ${this.totalIncome()}
+        total-Expenses: ${this.totalExpenses()}
+        `
+    }
+
+    set addIncome(amount) {
+        this.incomes.push(amount)
+    }
+
+    set addExpenses(cost) {
+        this.expenses.push(cost)
+    }
+}
+
+let myAccount = new PersonAccount("victor", "kenneth")
